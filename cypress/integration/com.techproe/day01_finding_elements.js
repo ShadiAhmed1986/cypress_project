@@ -9,6 +9,12 @@ describe('Finding Elements', () => {
 
         //2.Assert if Log in is visible
         cy.get('.row > .mb-4').should('be.visible')
+
+        //Finding total number of links taht is child of li
+        //Assert the total is 29
+        //  li a => Means give me all link(a) that is child of list item(li)
+        // xpath = li//a , css = li a
+        cy.get('li a').should('have.length',29)
     })
   
   })
