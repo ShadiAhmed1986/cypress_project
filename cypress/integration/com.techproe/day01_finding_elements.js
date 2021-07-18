@@ -15,6 +15,32 @@ describe('Finding Elements', () => {
         //  li a => Means give me all link(a) that is child of list item(li)
         // xpath = li//a , css = li a
         cy.get('li a').should('have.length',29)
+
+        //find() is used to find elements after get()
+        //get the Single room and assert there is one matching element
+        cy.get("a[href='/Rooms/6']").should('have.length',1)
+        //We can also say specifically
+        //find a[href='/Rooms/6'] that is child of li
+        cy.get('li').find("a[href='/Rooms/6']").should('have.length',1)
+
+        //3. within () is also used after get()
+        // Looks for specific elements within that parent
+        //1st option
+        cy.get("a[href='/Rooms/318']").should('have.length',1)
+        //2nd option
+        cy.get('div.categories').find("a[href='/Rooms/6']").should('have.length',1)
+        //3rd option
+        cy.get('div.categories').within( ()=>{//search for the elements that are child of div.categories
+            cy.get("a[href='/Rooms/318']").should('have.length',1)
+            cy.get("a[href='/Rooms/318']").click()
+        })
+        /*
+        NOTES: -We should always try get() to find the elements first
+        -If this fails to locate the element(not visible, not unique ,...)
+        Then try find
+        -If that also doesn't locate the element
+        Then use within
+         */
     })
   
   })
