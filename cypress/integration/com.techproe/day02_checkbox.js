@@ -61,7 +61,7 @@ https://docs.cypress.io/api/commands/check#Syntax
           .first()
           .should('be.checked')
           //The chenge is in the span element
-          //WHen a check box is checked the parent span has value of 'checke
+          //WHen a check box is checked the parent span has value of 'checked'
           //ASSERT IF THE PARENT SPAN CLASS VALUE IS CHECKED
           cy
           .get("input[type='checkbox']")
