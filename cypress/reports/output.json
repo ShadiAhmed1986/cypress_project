@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-07-25T20:12:10.125Z",
+    "end": "2021-07-25T20:12:29.574Z",
+    "duration": 14142,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4edf411a-cc5a-45c4-9743-ab17974db2a0",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day02_scroll.js",
+      "file": "cypress/integration/com.techproed/day02_scroll.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4b07744b-393f-4aea-b984-bbd4e6e4874d",
+          "title": "Scroll",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Scroll into view",
+              "fullTitle": "Scroll Scroll into view",
+              "timedOut": null,
+              "duration": 14142,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://qa-environment.crystalkeyhotels.com/'); //Scrolling down to view 'Our Rooms'\ncy.get('.col-md-7 > .mb-4').scrollIntoView();\ncy.wait(3000); //Scrolling down to view 'Recent Blog'\ncy.get(':nth-child(9) > .container > .justify-content-center > .col-md-7 > h2').scrollIntoView();\ncy.wait(3000); //Scrolling to 'Checkin date'\ncy.get(':nth-child(1) > .form-group > .wrap > label').scrollIntoView(); //scrollTo(x,y)\ncy.wait(2000);\ncy.scrollTo(0, 1000);\ncy.wait(2000);\ncy.scrollTo(0, -500);",
+              "err": {},
+              "uuid": "8887e17d-a8d9-4ef5-900d-dedf22f85b45",
+              "parentUUID": "4b07744b-393f-4aea-b984-bbd4e6e4874d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8887e17d-a8d9-4ef5-900d-dedf22f85b45"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14142,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

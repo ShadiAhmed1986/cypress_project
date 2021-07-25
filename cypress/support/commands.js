@@ -1,3 +1,22 @@
+/*This import is to handle iframes
+1.install plugin : 
+LINK: https://www.npmjs.com/package/cypress-iframe
+RUN ON TERMINAL : npm install -D cypress-iframe
+2. IMPORT PACKAGE IN THE CLASS : import 'cypress-iframe';
+WE CAN USE import 'cypress-iframe'; INSIDE THE commands.js
+3. cy.frameLoaded('CSS OF THE FRAME');
+import 'cypress-iframe';
+*/
+
+//for iframes
+import 'cypress-iframe';
+
+//for drag-drop
+import '@4tw/cypress-drag-drop';
+
+//for file upload
+import 'cypress-file-upload';
+
 /*
 -Create a custom method 
 -name : login
@@ -16,4 +35,15 @@ Cypress.Commands.add('login',(email,password) => {
     cy.get('#SubmitLogin > span').click()
 })
 
+/*
+Amazon search custom method
+This method will accept product name
+Then search for that product
+Then click on search button
+*/
 
+Cypress.Commands.add('amazonSearch',(productName) => {
+    cy.visit("https://www.amazon.com")
+    cy.get('#twotabsearchtextbox').type(productName)
+    cy.get('#nav-search-submit-button').click()
+})
