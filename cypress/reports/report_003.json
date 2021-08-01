@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-01T14:57:04.011Z",
+    "end": "2021-08-01T14:57:12.161Z",
+    "duration": 8150,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4a02ecbf-c14d-4553-8d29-76cd68d9ed0b",
+      "title": "",
+      "fullFile": "cypress/integration/2-advanced-examples/aliasing.spec.js",
+      "file": "cypress/integration/2-advanced-examples/aliasing.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "17254505-3f7c-4180-852f-6fcfbb6a453b",
+          "title": "Aliasing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": ".as() - alias a DOM element for later use",
+              "fullTitle": "Aliasing .as() - alias a DOM element for later use",
+              "timedOut": null,
+              "duration": 2066,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// https://on.cypress.io/as\n// Alias a DOM element for use later\n// We don't have to traverse to the element\n// later in our code, we reference it with @\ncy.get('.as-table').find('tbody>tr').first().find('td').first().find('button').as('firstBtn'); // when we reference the alias, we place an\n// @ in front of its name\ncy.get('@firstBtn').click();\ncy.get('@firstBtn').should('have.class', 'btn-success').and('contain', 'Changed');",
+              "err": {},
+              "uuid": "8d032820-28e9-4179-bdb9-360f019eddff",
+              "parentUUID": "17254505-3f7c-4180-852f-6fcfbb6a453b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": ".as() - alias a route for later use",
+              "fullTitle": "Aliasing .as() - alias a route for later use",
+              "timedOut": null,
+              "duration": 1434,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Alias the route to wait for its response\ncy.intercept('GET', '**/comments/*').as('getComment'); // we have code that gets a comment when\n// the button is clicked in scripts.js\ncy.get('.network-btn').click(); // https://on.cypress.io/wait\ncy.wait('@getComment').its('response.statusCode').should('eq', 200);",
+              "err": {},
+              "uuid": "f15b95aa-9c33-42f3-845c-b2d0ba91fcad",
+              "parentUUID": "17254505-3f7c-4180-852f-6fcfbb6a453b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8d032820-28e9-4179-bdb9-360f019eddff",
+            "f15b95aa-9c33-42f3-845c-b2d0ba91fcad"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3500,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

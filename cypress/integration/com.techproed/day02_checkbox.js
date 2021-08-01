@@ -3,7 +3,7 @@ describe('checkboxes',()=>{
 https://docs.cypress.io/api/commands/check#Syntax
     */
     it('checking single box',()=>{
- 
+
         //go to http://automationpractice.com/index.php
         //click on WOMEN
         //check the first checkbox

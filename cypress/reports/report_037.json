@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-01T15:05:52.659Z",
+    "end": "2021-08-01T15:06:00.075Z",
+    "duration": 7416,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2a1c6830-1d4a-4251-935d-3c2aebdfb45f",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day05_POM_test.js",
+      "file": "cypress/integration/com.techproed/day05_POM_test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "13f41818-c335-48cb-9800-7dbaee985a71",
+          "title": "PAYLINN",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Paylinn login test",
+              "fullTitle": "PAYLINN Paylinn login test",
+              "timedOut": null,
+              "duration": 4498,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Creating page objects\nconst homePage = new _HomePage.default(); //Creating LoginPage object\nconst loginPage = new _LoginPage.default(); //going to the application\ncy.visit(this.data.url); //clicking on sign in \nhomePage.getSigninLink().click(); //entering username\nloginPage.getUserNameBox().type(this.data.username); //Asserting if username is entered in the input box\n//We will verify if the calue attribute has User (this.data.username)\n//<input aria-invalid=\"true\" name=\"username\" type=\"text\" class=\"MuiInputBase-input MuiInput-input\" value=\"User\">\nloginPage.getUserNameBox().should('have.attr', 'value', this.data.username); //entering password\nloginPage.getPasswordBox().type(this.data.password); //Asserting if username element has teh value of user(this.data.password)\nloginPage.getPasswordBox().should('have.attr', 'value', this.data.password); // clicking on the sign in button\nloginPage.getLoginButton().click(); //verifying the log in successfull\nloginPage.getWelcomeText().should('contain.text', 'Welcome');\nloginPage.getNavbarHeader().should('contain.text', 'Welcome').and('contain.text', 'React').and('contain.text', 'Logout').and('contain.text', this.data.username);",
+              "err": {},
+              "uuid": "54c55408-9184-4720-afb9-2a22ef5707fe",
+              "parentUUID": "13f41818-c335-48cb-9800-7dbaee985a71",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "54c55408-9184-4720-afb9-2a22ef5707fe"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4498,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

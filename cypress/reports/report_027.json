@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-08-01T15:02:41.184Z",
+    "end": "2021-08-01T15:02:59.714Z",
+    "duration": 18530,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7d46eabd-11f5-4ed7-8fc9-16d7268eaef6",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day02_hover_over.js",
+      "file": "cypress/integration/com.techproed/day02_hover_over.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c01b1e49-f095-4e1d-a7c0-2941e32b5384",
+          "title": "move over",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "move over",
+              "fullTitle": "move over move over",
+              "timedOut": null,
+              "duration": 14550,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.amazon.com/');\ncy.get('.icp-nav-link-inner') //getting the element \n.trigger('mouseover'); //moving the mouse over\ncy.wait(3000);\n/*Test Case\nclick on Change country/region\nselect Canada from the dropdown\n*/\n//click on Change country/region\ncy.contains('Change country/region').click(); //select Canada from the dropdown\ncy.get('#icp-selected-country').select('Canada', {\n  force: true\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is not visible:\n\n`<a href=\"/gp/navigation-country/select-country/ref=icp_lop_mop_chg_ais?ie=UTF8&amp;preferencesReturnUrl=%2F\" class=\"nav-link                                    nav-item\" id=\"icp-flyout-mkt-change\">...</a>`\n\nThis element `<a#icp-flyout-mkt-change.nav-link.nav-item>` is not visible because its parent `<div#nav-flyout-icp.nav-coreFlyout.nav-flyout>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element is not visible:\n\n`<a href=\"/gp/navigation-country/select-country/ref=icp_lop_mop_chg_ais?ie=UTF8&amp;preferencesReturnUrl=%2F\" class=\"nav-link                                    nav-item\" id=\"icp-flyout-mkt-change\">...</a>`\n\nThis element `<a#icp-flyout-mkt-change.nav-link.nav-item>` is not visible because its parent `<div#nav-flyout-icp.nav-coreFlyout.nav-flyout>` has CSS property: `display: none`\n\nFix this problem, or use `{force: true}` to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at $Cy.ensureVisibility (https://www.amazon.com/__cypress/runner/cypress_runner.js:143984:24)\n    at runAllChecks (https://www.amazon.com/__cypress/runner/cypress_runner.js:132625:14)\n    at retryActionability (https://www.amazon.com/__cypress/runner/cypress_runner.js:132679:16)\n    at tryCatcher (https://www.amazon.com/__cypress/runner/cypress_runner.js:10798:23)\n    at Function.Promise.attempt.Promise.try (https://www.amazon.com/__cypress/runner/cypress_runner.js:8072:29)\n    at tryFn (https://www.amazon.com/__cypress/runner/cypress_runner.js:148807:21)\n    at whenStable (https://www.amazon.com/__cypress/runner/cypress_runner.js:148845:12)\n    at https://www.amazon.com/__cypress/runner/cypress_runner.js:148337:16\n    at tryCatcher (https://www.amazon.com/__cypress/runner/cypress_runner.js:10798:23)\n    at Promise._settlePromiseFromHandler (https://www.amazon.com/__cypress/runner/cypress_runner.js:8733:31)\n    at Promise._settlePromise (https://www.amazon.com/__cypress/runner/cypress_runner.js:8790:18)\n    at Promise._settlePromise0 (https://www.amazon.com/__cypress/runner/cypress_runner.js:8835:10)\n    at Promise._settlePromises (https://www.amazon.com/__cypress/runner/cypress_runner.js:8915:18)\n    at Promise._fulfill (https://www.amazon.com/__cypress/runner/cypress_runner.js:8859:18)\n    at https://www.amazon.com/__cypress/runner/cypress_runner.js:10473:46\nFrom Your Spec Code:\n    at Context.eval (https://www.amazon.com/__cypress/tests?p=cypress/integration/com.techproed/day02_hover_over.js:112:42)",
+                "diff": null
+              },
+              "uuid": "39368ed2-3027-4594-af97-e772f9d24171",
+              "parentUUID": "c01b1e49-f095-4e1d-a7c0-2941e32b5384",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "39368ed2-3027-4594-af97-e772f9d24171"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 14550,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

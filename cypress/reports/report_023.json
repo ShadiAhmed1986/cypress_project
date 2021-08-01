@@ -1,0 +1,127 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 1,
+    "failures": -1,
+    "start": "2021-08-01T15:01:34.465Z",
+    "end": "2021-08-01T15:01:48.449Z",
+    "duration": 13984,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "bb2be15e-8000-465e-8646-6a306243e279",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day02-suggested_elements.js",
+      "file": "cypress/integration/com.techproed/day02-suggested_elements.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dd4ee07e-1335-451e-92ea-8d622579e4ec",
+          "title": "Suggested Elements",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "suggested elements",
+              "fullTitle": "Suggested Elements suggested elements",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "a08676ea-1e55-4859-8095-ef487f2ec700",
+              "parentUUID": "dd4ee07e-1335-451e-92ea-8d622579e4ec",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "automation practice",
+              "fullTitle": "Suggested Elements automation practice",
+              "timedOut": null,
+              "duration": 9693,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com/index.php');\ncy.get(\"input[id='search_query_top']\").type('dress');\ncy.wait(3000);\ncy.get('.ac_results').contains('Blouses') //if we choose an element which is not unique, \n//it clicks the first one\n.click(); //Assertion\ncy.get(\"h1[itemprop='name']\").should('be.visible');",
+              "err": {},
+              "uuid": "50ae2134-0922-4296-8cf3-99db9b1f7a65",
+              "parentUUID": "dd4ee07e-1335-451e-92ea-8d622579e4ec",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "50ae2134-0922-4296-8cf3-99db9b1f7a65"
+          ],
+          "failures": [],
+          "pending": [
+            "a08676ea-1e55-4859-8095-ef487f2ec700"
+          ],
+          "skipped": [],
+          "duration": 9693,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
