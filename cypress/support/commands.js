@@ -2,8 +2,10 @@
 1.install plugin : 
 LINK: https://www.npmjs.com/package/cypress-iframe
 RUN ON TERMINAL : npm install -D cypress-iframe
+
 2. IMPORT PACKAGE IN THE CLASS : import 'cypress-iframe';
 WE CAN USE import 'cypress-iframe'; INSIDE THE commands.js
+
 3. cy.frameLoaded('CSS OF THE FRAME');
 import 'cypress-iframe';
 */
